@@ -1,0 +1,581 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задания по Js</title>
+		<link href="img/building.ico" rel="shortcut icon" type="image/x-icon">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/task.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body class="CommonStyle">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Menu">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="Menu">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html" >Главная</a></li>
+						<li><a href="page2.html">О себе</a></li>
+						<li><a href="page3.html">Мультимедиа</a></li>
+						<li class="nav-item Current"><a href="js.html">Задания JS</a></li>
+						<li><a href="forum.php">Форум</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<h1 class="col-xs-12 Heading">Задания по Js</h1>
+			<div class="col-xs-12">
+				<h2>Задание №1</h2>
+				<script type="text/javascript">
+					document.write("Лес — часть поверхности Земного шара, покрытая древесными растениями.");
+				</script>
+				<br>
+				<script type="text/javascript">
+					document.write("В настоящее время леса занимают около трети площади суши.");
+				</script>
+				<br>
+				<script type="text/javascript">
+					document.write("Площадь леса в России составляет 8 млн кв.км.");
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Задание №2</h2>
+				<script type="text/javascript" src="js/secred.js"></script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Задание №3</h2>
+				<script type="text/javascript">
+					{
+						var ex1 = 1;
+						var ex2 = 5;
+						document.write('Переменная 1: '+ex1+'<br />');
+						document.write('Переменная 2: '+ex2+'<br />');
+						ex2=200;
+						document.write('Переменная 2: '+ex2);
+					}
+				</script>
+				<h3>Работа со строками</h3>
+				<script type="text/javascript">
+					{
+						var ex='Привет всем!';
+						document.write(ex);
+					}
+				</script>
+
+				<h3>Удаление и переопределение переменных</h3>
+				<script type="text/javascript">
+					{
+						var ex=123;
+						var ex;
+						document.write(ex);
+
+						ex=123;
+						delete ex;
+
+						var ex=123;
+						ex=null;
+					}
+				</script>
+
+				<h2>Задание 3.1 Исправьте ошибки </h2>
+				<script type="text/javascript">
+					var var33 = 33;
+					document.write(var33);
+					document.write('<br />');
+		 
+					var str1='Привет всем!';
+					document.write(str1);
+					document.write('<br />');
+		 
+					var vaR = 288;
+					document.write(vaR);
+					document.write('<br />');
+				</script>
+
+				<h2>Задание №3.2</h2>
+				<script type="text/javascript" src="js/secred1.js">
+				</script>
+				<script type="text/javascript">
+					document.write(sec1, sec2, sec3, sec4, '<br>');
+					document.write(sec2, sec1, sec3, sec4, '<br>');
+					document.write(sec3, sec1, sec2, sec4, '<br>');
+					document.write(sec4, sec2, sec1, sec3, '<br>');
+					document.write(sec2, sec1, sec4, sec3, '<br>');
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Задание №4</h2>
+				<script type="text/javascript">
+						document.write("Условие задачи №1:<br>");
+						document.write("(35*y+25*x)/5+232 при x=3, y=20<br>");
+						var x = 3;
+						var y = 20;
+						var rez = (35*y+25*x)/5+232;
+						document.write('Ответ: ',rez, "<br>");
+
+						document.write("Условие задачи №2:<br>");
+						document.write("(188*y/8+25*x/5 - 435)*6 при x=16, y=20<br>");
+						x = 16;
+						y = 20;
+						rez = (188*y/8+25*x/5 - 435)*6;
+						document.write('Ответ: ',rez, "<br>");
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Задание №5</h2>
+				<script type="text/javascript">
+				var x;
+				var y;
+				x = 12; y = 2;
+				document.write("x = ", x, " y = ", y, "<br>");
+				if ( (x/8 == y) && (x > 16) && (y < 5) && (y != 3) )
+					document.write('Вы подобрали правильные значения x и y <b>поздравляем</b>!<br>');
+				else
+					document.write('Значения x и y не подходят попробуйте еще раз.<br>');
+
+				x = 32; y = 4;
+				document.write("x = ", x, " y = ", y, "<br>");
+				if ( (x/8 == y) && (x > 16) && (y < 5) && (y != 3) )
+					document.write('Вы подобрали правильные значения x и y <b>поздравляем</b>!');
+				else
+					document.write('Значения x и y не подходят попробуйте еще раз.');
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Задание №6</h2>
+				<script type="text/javascript" src="js/secred2.js"></script>
+				<script type="text/javascript">
+					//alert(var1);
+					var key_word = "";
+					if(var1 == 25){
+						key_word += 'А';
+					}
+					if(var1 > 15){
+						key_word += 'Ж';
+					}
+					if(var1 < 33){
+						key_word += 'К';
+					}
+					if(var2 == 10){
+						key_word += 'А';
+					}
+					if(var1 + var2 == 30){
+						key_word += 'Д';
+					}
+					if((var1 - var2 == 7) || (var2 - var1 == 7)){
+						key_word += 'Ш';
+					}
+					if(var3 < 6){
+						key_word +='М';
+					}
+					//№8
+					if((var3 == 8) && (var1 + var2 == 17)){
+						key_word +='З';
+					}
+					if(Math.abs(var3 - var2) == var1 + var2){
+						key_word +='Н';
+					}
+					//№10
+					if(var4 == var1 + var2 + var3){
+						key_word +='А';
+					}
+					if(var4 > Math.abs(var2 - var3)*4){
+						key_word +='Н';
+					}
+					if(var5 == var1*4){
+						key_word +='Б';
+					}
+					if(var5 == var2*3){
+						key_word +='Ь';
+					}
+					if((var1+var2+var3+var4+var5)/3 > 60){
+						key_word +='К';
+					}
+					document.write("Ключевое слово: ",key_word,"<br>");
+				</script>
+			</div>
+			<div class="col-xs-12">
+				<h2>Задание №7</h2>
+				<script type="text/javascript">
+					var enter = false;
+					while(!enter){
+						var str = prompt("Введите ваше имя", "Имя");
+						enter = confirm("Ваше имя " + str + "?");
+					}
+					alert("Приветствуем, " + str + ", на нашем сайте!");
+					document.write("7.1 Выполняется через всплывающие окна, вы ввели имя: "+ str + "<br>");
+				</script>
+
+				<script type="text/javascript" src="js/pass.js"></script>
+				<script type="text/javascript">
+					//7.2
+					var enter = false;
+					var str = "";
+					while(!enter){
+						str = prompt("Введите пароль!", "Пароль");
+						if(str == pass){
+							enter = true;
+						}
+					}
+					alert("Вы ввели верный пароль!");
+					document.write("7.2 Запрашивется пароль, через всплывающее окно." + "<br>");
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Задание №8</h2>
+				<script type="text/javascript">
+					document.write("8.1 Используя цикл сократить запись.<br>");
+					for(var i = 100; i >= 0; i -= 10){
+						document.write('Число: <b>'+i+'</b>');
+						document.write('<br>');
+					}
+				</script>
+
+				<script type="text/javascript">
+					function fun1(){
+				   for (var i = 1; i <= 10; i++){
+				      document.write(i + '<br>');
+				   }
+				 	}
+					function fun2(){
+					   for (var i = 100; i >= 0; i-=10){
+					      document.write(i + '<br>');
+					   }
+					}
+					function fun3(){
+					   var i = 40;
+					   while(i >= 0){
+						   if(i != 25){
+								 document.write(i + '<br>');
+							 }
+						   i-=5;
+					   }
+					}
+					document.write("8.2 Исправьте ошибки<br>");
+					document.write("Функция №1<br>");
+					fun1();
+					document.write("Функция №2<br>");
+					fun2();
+					document.write("Функция №3<br>");
+					fun3();
+				</script>
+
+				<script type="text/javascript">
+					document.write("8.3 Напишите скрипт сортировки массива<br>");
+					function selectionSort(arr){
+					  let min, temp; // для поиска минимального элемента и для обмена
+					  for (let i = 0; i < arr.length - 1; i++)
+					  {
+					    min = i; // запоминаем индекс текущего элемента
+					    // ищем минимальный элемент чтобы поместить на место i-ого
+					    for (let j = i + 1; j < arr.length; j++)  // для остальных элементов после i-ого
+					    {
+					      if (arr[j] < arr[min]) // если элемент меньше минимального,
+					        min = j;       // запоминаем его индекс в min
+					    }
+					    temp = arr[i];      // меняем местами i-ый и минимальный элементы
+					    arr[i] = arr[min];
+					    arr[min] = temp;
+					  }
+					}
+				  var item = new Array(1,2,47,8,9,4,3,42,45,3);
+				  var str = "";
+				  for(var i = 0; i < item.length; i++){
+				 	  str += item[i];
+					  str += " ";
+				  }
+				  document.write("Исходный массив: ", str, "<br>");
+				  selectionSort(item);
+				  str = "";
+				  for(var i = 0; i < item.length; i++){
+					str += item[i];
+					str += " ";
+				 }
+				 document.write("Отсортированный массив: ", str);
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Задание №9</h2>
+				<h2>9.1: Чтобы покрасть квадрат в красный необходимо: Нажать на кнопки 1 -> 3 -> 4,
+					после чего, навести курсор сперва на 2,
+					потом на 5 и выполнить двойной щелчек по 4
+				</h2>
+				<script type='text/javascript'>
+				function act1(){
+					document.getElementById('square').style.backgroundColor='red';
+					document.getElementById('square').innerHTML='Вы проиграли!';
+				}
+				function act2(){
+					document.getElementById('square').style.backgroundColor='red';
+					document.getElementById('square').innerHTML='Вы проиграли!';
+				}
+				function act3(){
+					document.getElementById('square').style.backgroundColor='green';
+					document.getElementById('square').innerHTML='Вы победили!';
+				}
+				function reset(){
+				   document.getElementById('square').style.backgroundColor='black';
+				   document.getElementById('square').style.color='white';
+				   document.getElementById('square').innerHTML=' ';
+				}
+				</script>
+				</head>
+				<div>
+					<h2>9.2: Угадайте в какая кнопка красит прямоугольник в зелённый</h2>
+					<p id='act' onclick='act1()'>Кнопка 1</p>
+					<p id='act' onmouseover='act2()'>Кнопка 2</p>
+					<p id='act' onclick='act3()'>Кнопка 3</p>
+					<p id='reset' onclick='reset()'>Сброс</p>
+					<br /><br />
+					<p aligin="center" id='square'></p>
+				</div>
+			</div>
+
+			<div class="col-xs-12">
+				<h1>Задания по теме: "Типы JS"</h1>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>String. Задание №1</h2>
+				<p>Извлеките часть строки ниже выделенную жирным шрифтом сначала с помощью
+				метода <b>substr()</b> затем с помощью <b>substring()</b> и выведите ее на
+				страницу: </p>
+				<hr>
+				<p>В тайге и горах можно увидеть <b>морала, лося, белку</b>, бурундука, зайца.</p>
+				<hr>
+				<script type='text/javascript'>
+					//Запишем строку в переменную str1
+					var str1 = 'В тайге и горах можно увидеть <b>морала, лося, белку</b>, бурундука, зайца.'
+					//Пишите ваш код здесь
+					var pos1 = str1.indexOf(">") + 1;
+					var pos2 = str1.lastIndexOf("<");
+
+					var str2 = str1.substr(pos1, pos2 - pos1);
+					document.write("Часть строки, полученная методом substr(): ", str2, "<br>");
+					var str3 = str1.substring(pos1, pos2);
+					document.write("Часть строки, полученная методом substring(): ",str3, "<br>");
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>String. Задание №2</h2>
+				<p>1. Раскодируйте значение строки и выведите ее на страницу: </p>
+				<p>(1052)(1086)(1074)(1072)</p>
+				<script type='text/javascript'>
+					var str = new String();
+					str = String.fromCharCode(1052, 1086, 1074, 1072);
+					document.write("Результирующая строка: ", str, "<br>");
+
+					var arr = new Array();
+					document.write("<p>2. Раскодируйте значение строки и выведите ее на страницу: </p>")
+					document.write("Проверка декодирования: ");
+					for(let i = 0; i < str.length; i ++){
+						arr.push(str.charCodeAt(i));
+						document.write(arr[i], " ");
+					}
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>String. Задание №3</h2>
+				<p id="taskText">Найдите начальные позиции выделенных жирным слов и выведите результат на экран</p>
+				<p><b>Алтайские горы</b> - представляют сложную систему самых высоких в <b>Сибири</b> хребтов,
+				разделённых глубокими долинами рек и обширными в внутригорными и межгорными котлованами.
+				Горная система расположена там, где сходятся границы России, монголии, Китая и Казахстана.
+				Она делится на <b>Южный Алтай</b> (Юго-Западный), Юго-Восточный Алтай и Восточный Алтай,
+				Центральный Алтай, Северный и Северо-Восточный Алтай, Северо-Западный Алтай.
+				Алтайский, Катунский заповедники и плоскогорье Укок и совокупности образуют объект
+				Всемирного наследия <b>ЮНЕСКО</b>, именуемый "<b>Алтай - Золотые горы</b>".
+				<br>
+					Текст взят с Wikipedia.org
+				</p>
+				<script type='text/javascript'>
+					var indices = [];
+					var str = '<b>Алтайские горы</b> - представляют сложную систему самых высоких в <b>Сибири</b> хребтов, разделённых глубокими долинами рек и обширными в внутригорными и межгорными котлованами. Горная система расположена там, где сходятся границы России, монголии, Китая и Казахстана. Она делится на <b>Южный Алтай</b> (Юго-Западный), Юго-Восточный Алтай и Восточный Алтай, Центральный Алтай, Северный и Северо-Восточный Алтай, Северо-Западный Алтай. Алтайский, Катунский заповедники и плоскогорье Укок и совокупности образуют объект Всемирного наследия <b>ЮНЕСКО</b>, именуемый "<b>Алтай - Золотые горы</b>". <br>';
+
+					var element = 'b';
+					var idx = str.indexOf(element);
+					while (idx != -1) {
+						if((str[idx - 1] == "<") && ((str[idx + 1] == ">"))){
+							indices.push(idx + 2);//Так как ищем скобку
+						}
+
+						idx = str.indexOf(element, idx + 1);
+					}
+					var result = "";
+					for(let i = 0; i < indices.length; i++){
+						result += indices[i];
+						result += " ";
+					}
+					document.write("Начальные позиции, выделенных жирным слов: ",result);
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Date. Задание №4</h2>
+				<p>Определите год, месяц, число, время, которые заданны в объектах date1,
+				date2, date3 и выведите на экран:
+				</p>
+				<script type='text/javascript'>
+
+					date1 = new Date(388048292221);
+					date2 = new Date(734019522932);
+					date3 = new Date(983283741123);
+					var year; var month; var day_of_month; var time;
+
+					year = date1.getFullYear();
+					month = date1.getMonth();
+					day_of_month = date1.getDate();
+					time = date1.getHours();
+					time += ":";
+					time += date1.getMinutes();
+
+					document.write("Дата №1 (date1)<br>");
+					document.write("Год: ", year, "<br>");
+					document.write("Месяц: ", month, "<br>");
+					document.write("Число: ", day_of_month, "<br>");
+					document.write("Время: ", time, "<br>");
+
+					year = date2.getFullYear();
+					month = date2.getMonth();
+					day_of_month = date2.getDate();
+					time = date2.getHours();
+					time += ":";
+					time += date2.getMinutes();
+
+					document.write("Дата №2 (date2)<br>");
+					document.write("Год: ", year, "<br>");
+					document.write("Месяц: ", month, "<br>");
+					document.write("Число: ", day_of_month, "<br>");
+					document.write("Время: ", time, "<br>");
+
+					year = date3.getFullYear();
+					month = date3.getMonth();
+					day_of_month = date3.getDate();
+					time = date3.getHours();
+					time += ":";
+					time += date3.getMinutes();
+
+					document.write("Дата №3 (date3)<br>");
+					document.write("Год: ", year, "<br>");
+					document.write("Месяц: ", month, "<br>");
+					document.write("Число: ", day_of_month, "<br>");
+					document.write("Время: ", time, "<br>");
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Math. Задание №5</h2>
+				<h2>5.1: 	Узнайте какое из четырех выражений имеет наибольшее значение и выведите результат.</h2>
+				<script type='text/javascript'>
+					var v1 = 34 * Math.pow(Math.PI, 2) + 2 * Math.pow(Math.E, 8);
+					var v2 = Math.cos(2) + Math.cos(12) + 8 * Math.pow(Math.PI, 3);
+					var v3 = Math.sin(10) + 15 *  Math.pow(Math.E, 3);
+					var v4 = Math.pow(39, 0.5) + 32 * Math.pow(Math.PI, 0.5) + Math.tan(3);
+
+					document.write("34PI^2+2E^8 = ", v1, "<br>");
+					document.write("cos(2)+cos(12)+8PI^3 = ", v2, "<br>");
+					document.write("sin(10)+15E^3 = ", v3, "<br>");
+					document.write("39^0.5+32*PI^0.5+tan(3) = ", v4, "<br>");
+
+					var rez = Math.max(v1, v2, v3, v4);
+					document.write("Наибольшее значение: ",rez);
+				</script>
+
+				<h2>5.2: Узнайте какое из трех округленных до ближайшего целого выражений ниже
+					 	минимально и выведите результат
+				</h2>
+				<script type='text/javascript'>
+					var v1 = Math.pow(48/(3*Math.PI) + 308/(4*Math.E), 2) - 203*Math.sin(5) + Math.pow(10*Math.PI - 3 * Math.E, 3);
+					var v2 = Math.pow(Math.cos(20) - Math.cos(3) + Math.tan(50), 0.5) - 203/Math.sin(2);
+					var v3 = Math.pow(22 * Math.PI/ (22 * Math.E) - Math.sin(3) * Math.tan(4) - 34, 10);
+
+					v1 = Math.round(v1);
+					document.write("(48/3PI+308/4E)^2-203sin(5)+(10PI-3E)^3 = ", v1, "<br>");
+					v2 = Math.round(v2);
+					document.write("(cos(20)-cos(3)+tan(50))^0.5-203/sin(2) = ", v2, "<br>");
+					v3 = Math.round(v3);
+					document.write("(22PI/22E-sin(3)*tan(4)-34)^10 = ", v3, "<br>");
+
+					var rez = Math.min(v1, v2, v3);
+					document.write("Наименьшее значение: ", rez);
+				</script>
+			</div>
+
+			<div class="col-xs-12">
+				<h2>Создание объектов. Задание №6</h2>
+				<script type='text/javascript'>
+					class Automobile{
+						constructor(color, model, year, manufact) {
+							this.color = color;
+							this.model = model;
+							this.year = year;
+							this.manufact = manufact;
+						}
+
+						whatColor(){
+							return this.color;
+						}
+
+						autoInfo(){
+							return [this.model, this.year, this.manufact];
+						}
+					}
+
+					var nissan = new Automobile("Красный", "Skyline", 2007, "Nissan");
+					var toyota = new Automobile("Черный", "Corolla", 2009, "Toyota");
+					var vw = new Automobile("Синий","Colf", 2009, "VolksWagen");
+
+					document.write(nissan.whatColor(), "<br>");
+					document.write(nissan.autoInfo(), "<br>");
+
+					document.write(toyota.whatColor(), "<br>");
+					document.write(toyota.autoInfo(), "<br>");
+
+					document.write(vw.whatColor(), "<br>");
+					document.write(vw.autoInfo(), "<br>");
+
+					class Driver extends Automobile{
+						constructor(color, model, year, manufact, name, experience){
+							super(color, model, year, manufact);
+							this.name = name;
+							this.experience = experience;
+						}
+						driverInfo(){
+							return [this.name, this.experience];
+						}
+					}
+
+					var dm = new Driver("Белый", "Focus", 2010, "Ford", "Дмитрий", 3);
+					document.write(dm.whatColor(), "<br>");
+					document.write(dm.autoInfo(), "<br>");
+					document.write(dm.driverInfo(), "<br>");
+
+				</script>
+			</div>
+
+	   </div>
+		 <script src="js/jquery.js"></script>
+		 <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

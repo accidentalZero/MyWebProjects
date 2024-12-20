@@ -1,0 +1,162 @@
+<meta charset="UTF-8">
+<input type='email' placeholder='E-mail'>
+<script>
+    // Задание №1 
+    let calc = (num1, num2, op) => {
+        switch(op){
+            case '+':
+                return 'Сумма чисел ' + num1.toString() + ' и ' + num2.toString() + ' равна ' + (num1 + num2).toString();
+                break;
+            case '-':
+                return 'Разница чисел ' + num1.toString() + ' и ' + num2.toString() + ' равна ' + (num1 - num2).toString();
+                break;
+            case '*':
+                return 'Произведение чисел ' + num1.toString() + ' и ' + num2.toString() + ' равно ' + (num1 * num2).toString();
+                break;
+            case '/':
+                return 'Частное чисел ' + num1.toString() + ' и ' + num2.toString() + ' равно ' + (num1 / num2).toString();
+                break;
+            case '%':
+                return 'Остаток от деления числа ' + num1.toString() + ' на ' + num2.toString() + ' равен ' + (num1 % num2).toString();
+                break;
+            case '//':
+                return 'Результат целочисленного деления числа ' + num1.toString() + ' на ' + num2.toString() + ' равен ' + parseInt((num1 / num2)).toString();
+                break;
+            case '^':
+                return 'Результат возведения числа ' + num1.toString() + ' в степень ' + num2.toString() + ' равен ' + (Math.pow(num1, num2)).toString();
+                break;
+        }
+    }
+    alert(calc(2, 3, '+'));
+
+    // Задание №2
+    let test_checker = (test, condition) => {
+        if(test == condition){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
+    alert('Условие соблюдается? ' + test_checker('Измерение 1', 'Измерение 1'));
+
+    // Задание №3
+    let is_palindrome = (word) => {
+        let reverse = Array.from(word).reverse().join('');
+        if(word.toLowerCase() == reverse.toLowerCase()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
+    alert('Фамилия палиндром? ' + is_palindrome('Петренко'));
+
+    // Задание №4
+    arr_avg = (arr) => {
+        sum = 0;
+        arr.forEach(element => sum += element);
+        return sum/arr.length;
+    };
+    alert('Среднее значение в массиве: ' + arr_avg([1, 5, 6, 8]));
+
+    // Задание №5
+    daysUntilNewYear = () => {
+        let curr = new Date();        
+        let new_year = new Date((curr.getFullYear() + 1).toString() + '-01-01T00:00:00');
+        return parseInt((new_year - curr) / (1000 * 3600 * 24));
+    };
+    alert('Дней до нового года: ' + daysUntilNewYear());
+
+    // Задание №6
+    test = () => {}
+    alert(test())
+
+    // Задание №7
+    test_arr = new Array(2, 3, 5, 3, 5, 6, 7, 1, 2, 4, 5);
+    let arr_sum = arr => {
+        let sum = 0;
+        arr.forEach(element => sum += element);
+        return sum;
+    }
+    alert(arr_sum(test_arr));
+    all_even = arr => {
+        let even = new Array();
+        arr.forEach(element => {if(element%2==0){even.push(element)}});
+        return even;
+    }
+    alert(all_even(test_arr));
+    let all_double = arr => {
+        for(let i = 0; i < arr.length; i++)
+            arr[i]*=2;
+        return arr;
+    }
+    alert(all_double(test_arr));
+
+    // Задание №8
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    let emails = new Array('test@mail.ru', 'test01@bk.ru', 'tets@gmail.com');
+    email_filter = value => {
+        return EMAIL_REGEXP.test(value);
+    }
+    emails.forEach(element => alert(email_filter(element)));
+    const input = document.querySelector('input');
+    input.addEventListener('input', () => {
+        if (email_filter(input.value)){
+            input.style.borderColor = 'green';
+        } else {
+            input.style.borderColor = 'red';
+        }
+    });
+
+    // Дополнительное задание
+    let randomColor = () => {
+        colors = new Array(0, 1, 2);
+        return colors[Math.floor(Math.random()*colors.length)];
+    }
+    sim = () => {
+        let prev_color = 3;
+        let max_con = 0;
+        let curr_con = 0;
+        let max_color = 3;
+        for(let i = 0; i < 1000000; i++){
+            let color = randomColor();       
+            if(color == prev_color){
+                curr_con++;
+                if(curr_con > max_con){
+                    max_con = curr_con;
+                    max_color = color;
+                }
+            }
+            else{
+                curr_con = 0;
+            }
+            prev_color = color;   
+        }
+        return 'Самая длинная последовательность: ' + max_con.toString() + ', цвета: ' + max_color.toString();
+    }
+    alert(sim());
+</script>
+<!--
+    1. Есть ли у стрелочной функции метод this?
+    Ответ: У стрелочных функций нет this. Если происходит обращение к this, его значение берётся снаружи.
+
+    2. Может ли стрелочная функция быть без аргументов?
+    Ответ: Да, может
+
+    3. Из-за чего появилась стрелочная функция?
+    Ответ: Стрелочные функции - это краткая, синтаксически приятная вариация традиционного функционального выражения.   
+
+    4. Объяснить работу алгоритма:
+    // Стрелочные функции без параметров, которые визуально легче разбирать
+    setTimeout( () => {
+        console.log('Я буду раньше');
+        setTimeout( () => {
+            // deeper code
+            console.log('Я буду позже');
+        }, 1);
+    }, 1);
+    Устанавливаются два таймаута, которым передаются стрелочные функции, 
+    которые будут выполнены по истечению указанного времени (1 с.)
+-->
+

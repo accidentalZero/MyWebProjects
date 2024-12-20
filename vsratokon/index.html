@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>ВСРАТОКОН!</title>
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="img/icon.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Это шутка</a></li>
+                <li><a href="#">Или нет</a></li>
+                <li><a href="#">Решать</a></li>
+                <li><a href="#">Вам</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 class="headerText">Не конкурс, а какой-то...<br><span>ВСРАТОКОН!</span></h2> 
+                <p class="aboutText">Пришло время поучаствовать в самом абсурдном соревновании по программированию.
+                Никакой конкретики по заданию и только одно ограничение… Приложение должно быть реализовано с использованием Lazarus.</p>
+                <a href="contest.pdf">Узнать больше</a>               
+            </div>
+            <div class="imgBox">
+                <img src="img/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" onclick="imgSlider('img/img1.png');changeCircleColor('#017143');
+            changeText(text1);changeHeader(header1);changeSpanColor('#017143');changeButtonColor('#017143');"></li>
+            <li><img src="img/thumb2.png" onclick="imgSlider('img/img2.png');changeCircleColor('#eb7495');
+            changeText(text2);changeHeader(header2);changeSpanColor('#eb7495');changeButtonColor('#eb7495');"></li>            
+            <li><img src="img/thumb3.png" onclick="imgSlider('img/img3.png');changeCircleColor('#3da67f');
+            changeText(text3);changeHeader(header3);changeSpanColor('#3da67f');changeButtonColor('#3da67f');"></li> 
+            <li><img src="img/thumb4.png" onclick="imgSlider('img/img4.png');changeCircleColor('#bf77b8');
+            changeText(text4);changeHeader(header4);changeSpanColor('#bf77b8');changeButtonColor('#bf77b8');"></li>  
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="img/facebook.png"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="img/twitter.png"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="img/instagram.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything){
+          document.querySelector('.starbucks').src = anything;
+      }
+
+      function changeHeader(newHeader){
+        document.querySelector('.headerText').innerHTML = newHeader;
+      }
+
+      function changeText(newText){
+        document.querySelector('.aboutText').textContent = newText;        
+      }
+
+      function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+      }
+
+      function changeSpanColor(color){
+        const span = document.querySelector('.content .textBox h2 span');
+        span.style.color = color;        
+      }
+
+      function changeButtonColor(color){
+        const span = document.querySelector('.content .textBox a');
+        span.style.background = color;        
+      }      
+
+      function toggleMenu(){
+          let menuToggle = document.querySelector('.toggle');
+          let navigation = document.querySelector('.navigation');
+          menuToggle.classList.toggle('active');
+          navigation.classList.toggle('active');
+      }
+      const header1 = "Не конкурс, а какой-то...<br><span>ВСРАТОКОН!</span>";
+      const header2 = "Плохому программисту<br><span>стек </span> мешает!";
+      const header3 = "<span>Зачем </span>мне это вообще?!"; 
+      const header4 = "Опыт. Код. <span>Слёзы.</span>";
+      const text1 = "Пришло время поучаствовать в самом абсурдном соревновании \
+        по программированию. Никакой конкретики по заданию и только одно ограничение…\
+        Приложение должно быть реализовано с использованием Lazarus!";
+      const text2 = "Как насчёт проверки своих профессиональных умений в сложных условиях?\
+        Если Lazarus действительно такая ужасная среда разработки, то для того, чтобы сделать\
+        с её помощью что-то действительно интересное нужно быть серьезным специалистом, верно?";
+      const text3 = "Я не знаю… Среди сотен тысяч миллиардов вакансий на ХаХа.сайтах\
+        встречаются такие, которые подразумевают наличие у кандидата навыков работы\
+        в среде Delphi. А как известно, лучший Delphi это тот, за который платить не нужно.";
+      const text4 = "Приняв участие в конкурсе, вы получите бесценный опыт разработки.\
+        Никогда еще написание и отладка кода не были столь болезненными и мучительными,\
+        испытайте себя поединком с Lazarus и получите проект-жемчужину в своё портфолио.";      
+    </script>
+</body>
+</html>

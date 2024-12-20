@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<script>
+    // Задание №1
+    let num = parseInt(prompt('Введите любое число'));
+    alert('Используемый тип данных: ' + typeof(num)); // Дополнительное задание
+    alert("Введенное вами число: " + num.toString());    
+    // Задание №2
+    let num1 = parseInt(prompt('Введите первое число'));
+    let num2 = parseInt(prompt('Введите второе число'));
+    let op; 
+    let operations = new Array('+', '-', '*', '/', '%', '//', '^'); 
+    while(true){
+        op = prompt('Введите оператор');
+        if(operations.includes(op)){
+            break;
+        }
+        alert('Неверный оператор, повторите ввод оператора!');
+    }
+    switch(op){
+        case '+':
+            alert('Сумма чисел ' + num1.toString() + ' и ' + num2.toString() + ' равна ' + (num1 + num2).toString());
+            break;
+        case '-':
+            alert('Разница чисел ' + num1.toString() + ' и ' + num2.toString() + ' равна ' + (num1 - num2).toString());
+            break;
+        case '*':
+            alert('Произведение чисел ' + num1.toString() + ' и ' + num2.toString() + ' равно ' + (num1 * num2).toString());
+            break;
+        case '/':
+            alert('Частное чисел ' + num1.toString() + ' и ' + num2.toString() + ' равно ' + (num1 / num2).toString());
+            break;
+        case '%':
+            alert('Остаток от деления числа ' + num1.toString() + ' на ' + num2.toString() + ' равен ' + (num1 % num2).toString());
+            break;
+        case '//':
+            alert('Результат целочисленного деления числа ' + num1.toString() + ' на ' + num2.toString() + ' равен ' + parseInt((num1 / num2)).toString());
+            break;
+        case '^':
+            alert('Результат возведения числа ' + num1.toString() + ' в степень ' + num2.toString() + ' равен ' + (Math.pow(num1, num2)).toString());
+            break;
+    }
+    // Задание №3
+    let magic_number = parseInt(prompt('Загадайте число, умножьте на 2, прибавьте 7 и введите в это окно результат'));
+    magic_number = (magic_number - 7) / 2;
+    alert('Вы загадали число: ' + magic_number.toString());
+    // Задание №4
+    let name = prompt('Введите ваше имя');
+    let year = parseInt(prompt('Введите год вашего рождения'));
+    let now = new Date();
+    let age = now.getFullYear() - year;
+    document.open();
+    document.write("<div>"+name + ": " + age.toString() +"<div>");
+    document.close();
+    // Дополнительное задание 
+    alert(typeof(name))
+</script>
+<!--
+    Контрольные вопросы
+
+    1. В чем разница между var и let?
+    Ответ: Директива let позволяет объявить локальную переменную с областью видимости, ограниченной текущим блоком кода.
+    В отличие от ключевого слова var (en-US), которое объявляет переменную глобально или локально во всей функции, независимо от области блока.
+    var - устаревающая директива, let появилась позже.
+
+    2. Какие типы данных в Java Script вы знаете?
+    Ответ: В JavaScript существует восемь типов данных: числа (number), строки (string), логические значения (boolean), null (отсутствие значение),
+    undefined (не определенное значение), большие числа (BigInt), а также объект (object) и символ (symbol).
+
+    3. В каком типе сохраняется переменная, полученная с помощью команды prompt?
+    Ответ: Вызов prompt возвращает то, что ввёл посетитель – строку или специальное значение null, если ввод отменён.
+-->

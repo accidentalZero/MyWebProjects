@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Регистрация</title>	
+		<link href="img/building.ico" rel="shortcut icon" type="image/x-icon">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body class="CommonStyle">
+		<div class="col-xs-12">
+			<form name = "entry" method = "POST" action = php/cookie_set.php>
+			<fieldset>
+				<legend>Вводите только буквы латинского алфавита и цифры</legend>
+				Имя:<input type = "text" name = "user" >
+				Пароль:<input type = "password" name = "pass">
+				Почта:<input type = "text" name = "email">
+				<br><br><input type = "submit" value = "Зарегистрироваться" >
+			</fieldset>
+			</form>
+		</div>	
+	</body>

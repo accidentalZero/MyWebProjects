@@ -1,0 +1,33 @@
+#act
+{
+padding:2px;
+color:white;
+border:1px black solid;
+display:inline;
+text-align:center;
+background-color:blue;
+cursor:pointer;
+}
+#reset
+{
+padding:2px;
+color:white;
+border:1px black solid;
+display:inline;
+text-align:center;
+background-color:red;
+cursor:pointer;
+}
+#square
+{
+width:600px;
+height:50px;
+margin: auto;
+text-align:center;
+color:white;
+background-color:black;
+}
+#congr
+{
+display:inline;
+}

@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <style>
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        H1 { 
+         font-size: 120%; 
+         font-family: Verdana, Arial, Helvetica, sans-serif; 
+         color: #333366; 
+        }
+        input[type=text], input[type=password], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=button] {
+            width: 45%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=reset] {
+            width: 45%;
+            background-color: #df554e;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=button]:hover{
+            background-color: #45a049;
+        }
+        input[type=reset]:hover {
+            background-color: #a04945;
+        }
+       </style>
+    <script>
+        function registration(){
+            if(document.RegForm.Pwd.value==document.RegForm.Pwd1.value)
+                alert("Вас зарегистрировали\nID="+document.RegForm.Id.value+"\nPassword="+document.RegForm.Pwd.value);
+            else
+                alert("Ошибка при вводе пароля\nПопробуйте еще раз");
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form name="RegForm">
+            <label for="Id">Id</label>
+            <input type="text" name="Id" onBlur="this.value=this.value.toUpperCase()" placeholder="Введите ваш id..">
+      
+            <label for="Pwd">Пароль</label>
+            <input type="password" name="Pwd" onFocus="this.select();" placeholder="Придумайте пароль...">
+        
+            <label for="Pwd1">Подтверждение пароля</label>
+            <input type="password" name="Pwd1" onFocus="this.select();" placeholder="Повторите пароль...">
+
+            <div style="text-align: center;">
+                <input type="button" value="Готово" onClick="registration();">
+                <input type="reset" value="Сброс">
+            </div>            
+        </form>
+    </div>    
+</body>
+</html>
+<!--
+    Контрольные вопросы
+    1. Сколько наборов свойств имеет форма?
+    Ответ:
+    Объект form имеет два набора свойств, состав одного из которых является фиксированным, а состав другого зависит от того, какие поля и органы управления определены в форме.
+    Первый набор свойств приведен ниже:
+
+    Свойство	Описание
+    action	Содержит значение параметра ACTION
+    elements	Массив всех элементов (полей и органов управления), определенных в форме
+    encoding	Содержит значение параметра ENCTYPE
+    length	Размер массива elements
+    method	Содержит значение параметра METHOD
+    target	Содержит значение параметра TARGET
+
+    2. За что отвечает свойство length?
+    Ответ: В случае с формой возвращается размер массива elements.
+-->

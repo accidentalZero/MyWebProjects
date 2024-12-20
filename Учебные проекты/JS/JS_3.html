@@ -1,0 +1,110 @@
+<meta charset="UTF-8">
+<script>
+    // Задание №1
+
+    function randomInteger(min, max){
+        let rand = min + Math.random() * (max + 1 - min);
+        return Math.floor(rand);
+    }
+
+    let num_arr = new Array();
+    let positive_count = 0;
+    let positive_sum = 0;
+    for(let i = 0; i < 15; i++){
+        let curr_number = randomInteger(-10, 30);
+        num_arr.push(curr_number);
+        if(curr_number > 0){
+            positive_sum += curr_number;
+            positive_count++;
+        }
+    }
+    alert(num_arr.toString());
+    alert('Среднее положительных членов: ' + (positive_sum/positive_count).toString());
+
+    // Задание №2
+    // Возьмем для выполнения задания массив из первого
+    function negativeToSqr(arr){
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] < 0){
+                arr[i] = arr[i] * arr[i];
+            }
+        }
+        return arr;
+    }    
+    res_arr = negativeToSqr(num_arr);
+    alert(res_arr.toString());
+
+    // Задание №3
+    function task3(arr){
+        let negative_count = 0;
+        let negative_sum = 0;
+        let positive_count = 0;
+        let positive_sum = 0;
+        let zero_count = 0;
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] < 0){
+                negative_sum += arr[i];
+                negative_count++;
+            }
+            else if(arr[i] > 0){
+                positive_sum += arr[i];
+                positive_count++;
+            }
+            else{
+                zero_count++;
+            }
+        }
+        return new Array(positive_sum/positive_count, negative_sum/negative_count, zero_count);
+    }
+    let ans = task3(new Array(-9,-4,17,0,-1,15,11,0,13,20,30,9,18,-10,-2));
+    alert('Ср. пол.: ' + ans[0].toString() + ' ср. отриц.: ' + ans[1].toString() + ' кол-во нулей: ' + ans[2].toString());
+
+    // Задание №4
+    function randomColor(){
+        colors = new Array(0, 1, 2);
+        return colors[Math.floor(Math.random()*colors.length)];
+    }
+
+    red_count = 0;
+    let prev_color = 3;
+    let max_con = 0;
+    let curr_con = 0;
+    let max_color = 3;
+    for(let i = 0; i < 1000000; i++){
+        let color = randomColor();
+        if(color == 0){
+            red_count++;
+        }
+        if(color == prev_color){
+            curr_con++;
+            if(curr_con > max_con){
+                max_con = curr_con;
+                max_color = color;
+            }
+        }
+        else{
+            curr_con = 0;
+        }
+        prev_color = color;   
+    }
+    alert('Красное выпадало: ' + red_count.toString());
+    // Дополнительное задание
+    alert('Самая длинная последовательность: ' + max_con.toString() + ', цвета: ' + max_color.toString());
+</script>
+<!--
+    Контрольные вопросы
+
+    1. Какие значения могут принимать элементы массива?
+    Ответ: В массиве могут храниться элементы любого типа.
+
+    Например:
+
+    // разные типы значений
+    let arr = [ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ];
+
+    // получить элемент с индексом 1 (объект) и затем показать его свойство
+    alert( arr[1].name ); // Джон
+
+    // получить элемент с индексом 3 (функция) и выполнить её
+    arr[3](); // привет
+-->

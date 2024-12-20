@@ -1,0 +1,95 @@
+<meta charset="UTF-8">
+<script>
+    // Задание №1
+    const arr1 = [1, 2, 3];
+    const arr2 = arr1.map(item => (item + 10) * 3);
+    console.log(arr2);
+    // Задание №2
+    const birth_yers = new Array('1999', '1994', '1997', '2007');
+    const curr_year = new Date().getFullYear();
+    const ages = birth_yers.map(item => curr_year - item);
+    console.log(ages);
+    // Задание №3
+    const users = [
+        {name: 'Peter', role: 'admin'},
+        {name: 'Mark',  role: 'user'},
+        {name: 'John',  role: 'user'},
+        {name: 'Jane',  role: 'admin' },
+        {name: 'Tony',  role: 'user'},
+    ];
+    const admins = users.filter(user => user.role == 'admin');
+    console.log(admins);
+    // Задание №4
+    const students = [
+        {name: 'Peter', marks: [3, 4, 5, 4, 5]},
+        {name: 'Mark',  marks: [3, 2, 2, 3, 4]},
+        {name: 'John',  marks: [5, 5, 5, 4, 3]},
+        {name: 'Jane',  marks: [4, 5, 3, 4, 5, 4]},
+        {name: 'Tony',  marks: [5, 4, 5, 4, 5]},
+    ];
+    students.map(student => {
+        const sum = student.marks.reduce(function(accumulator, currentValue){
+            return accumulator + currentValue;
+        });
+        student.avg = sum/student.marks.length;
+    })
+    console.log(students);
+    // Задание №5
+    const strArray = ['JavaScript', 'Python', 'PHP', 'Java', 'C'];
+
+    function mapForEach(arr, fn){
+        const newArray = [];
+        for(let i = 0; i < arr.length; i++){
+            newArray.push(fn(arr[i]));
+        }
+        return newArray;
+    }
+    
+    const lenArray = mapForEach(strArray, function(item){
+        if(item.length <= 3){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    });
+    console.log(lenArray);
+    // Дополнительное задание
+    function simulation(n, fn){
+        let prev_color = 3;
+        let max_con = 0;
+        let curr_con = 0;
+        let max_color = 3;
+        for(let i = 0; i < n; i++){
+            let color = fn();
+            if(color == prev_color){
+                curr_con++;
+                if(curr_con > max_con){
+                    max_con = curr_con;
+                    max_color = color;
+                }
+            }
+            else{
+                curr_con = 0;
+            }
+            prev_color = color;
+        }
+        return 'Самая длинная последовательность: ' + max_con.toString() + ', цвета: ' + max_color.toString();        
+    };
+
+    let result = simulation(1000000, () => {
+        colors = new Array(0, 1, 2);
+        return colors[Math.floor(Math.random()*colors.length)];
+    });
+    console.log(result);
+</script>
+<!--
+    Контрольные вопросы
+    1. Функция Array.prototype.map какого порядка?
+    Ответ: Функции высшего порядка — это функции, которые работают с другими функциями, принимая функцию как аргумент
+    или возвращая функцию как результат. 
+    Примерами функций высшего порядка, которые уже встроены в язык, являются: Array. prototype. map 
+
+    2. Проанализируйте код. Является ли функция lenArray высшего порядка?
+    Ответ: Да, функция lenArray является функцией высшего порядка, так как в качестве аргумента принимает функцию.
+-->

@@ -1,0 +1,101 @@
+<meta charset="UTF-8">
+<script>
+    // Задание №1
+
+    let user = {
+        name: "Джон",
+        age: 30
+    };
+    user.sayHi = function(){
+        alert("Привет!");
+    };
+    user.sayHi();
+
+    // Задание №2
+
+    let customer = {
+        name: "Василий",
+        age: 25,
+        country: "Россия",
+        city: "Москва",
+        number: "+7 777 777 77 77"
+    }
+    alert("Имя: " + customer.name + ", город: " + customer.city + ", телефон: " + customer.number);
+
+    // Задание №3
+
+    let user0 = {
+        name: "Максим",
+        number: "+7 777 777 77 77",
+        address: "ул. Победы"
+    };
+    let restaurant0 = {
+        name: 'Claude monet',
+        address: 'ул. Спиридоновка, 25/20с1'
+    };
+    let order0 = {
+        client: user0,
+        restaurant: restaurant0
+    };
+    if(order0.restaurant.name == 'Claude monet'){
+        alert('Клиент: ' + order0.client.name + ' сделал заказ из ресторана: ' + order0.restaurant.name);
+    }
+
+    // Задание №4
+
+    function User(name){
+        this.name = name;
+    }
+    group_names = ["Федор", "Кира", "Арина", "Рафаэль", "Владислав", "Борис", "Данила", "Артемий", "Дмитрий",
+    "Никита", "Ирина", "Андрей", "Раяна", "Альберт"];
+    group_objects = []
+    group_names.forEach(name => group_objects.push(new User(name)));
+    group_objects.forEach(obj => alert(obj.name))
+
+    // Задание №5
+    function Student(name, group, number){
+        this.name = name;
+        this.group = group;
+        this.number = number;
+        this.sayAbout = function(){
+            alert("Я - " + this.name + ", студент группы: " + group + ", номер ст. билета: " + this.number);
+        };
+    }
+    let student = new Student('Артемий', 'ЗБ-ПИ20-2', 202401);
+    student.sayAbout();
+
+    // Дополнительное
+
+    function Calc(num1, num2){
+        this.num1 = num1;
+        this.num2 = num2;
+        this.add = function(){
+            return this.num1 + this.num2;
+        };
+        this.sub = function(){
+            return this.num1 - this.num2;
+        };
+        this.mul = function(){
+            return this.num1 * this.num2;
+        };
+        this.div = function(){
+            return this.num1 / this.num2;
+        };
+    }
+    alert('Тестирование калькулятора')
+    let calc = new Calc(4, 2);
+    alert(calc.add());
+    alert(calc.sub());
+    alert(calc.mul());
+    alert(calc.div());
+</script>
+<!--
+    Контрольные вопросы
+
+    1. Для чего нужен объект?
+    Ответ: Объект – это один из типов данных в JavaScript. Он предназначен для хранения коллекции различных значений и более сложных сущностей.
+    В JavaScript объект можно представить как набор пар «ключ: значение». При этом значение может быть чем угодно.
+
+    2. Какие методы могут быть у объекта?
+    Ответ: Методы могут быть статические и нестатические. Статические - это такие методы, которые выполняются без экземпляра класса...
+-->

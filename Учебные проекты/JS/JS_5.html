@@ -1,0 +1,136 @@
+<meta charset="UTF-8">
+<script>
+    // Задание №1
+
+    function showMessage(){
+        let message = "Привет, я JavaScript!"; // локальная переменная
+        alert( message );
+    }
+    showMessage(); // Привет, я JavaScript!
+    //alert(message); // Произойдет ошибка, так как переменная message объялена в области видимсоти функции
+    
+    // Задание №2
+
+    function palindrome(str){
+        let reverse = Array.from(str).reverse().join('');
+        if(str.toLowerCase() == reverse.toLowerCase()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    alert(palindrome('дед'));
+    alert(palindrome('олег'));
+
+    // Задание №3
+
+    function negativeToSqr(arr){
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] < 0){
+                arr[i] = arr[i] * arr[i];
+            }
+        }
+        return arr;
+    }    
+    res_arr = negativeToSqr([1, 2, 3, 4,-2, -4, -3, 4, 5, 2]);
+    alert(res_arr.toString());
+
+    // Задание №4
+   
+    class User{
+        constructor(name){
+            this.name = name;
+        }
+        sayMyName(){
+            alert("My name is " + this.name);
+        }
+    }
+    let user = new User("Vladimir");
+    user.sayMyName();
+
+    // Задание №5
+
+    class People{
+        constructor(name){
+            this.name = name;
+        }
+        showMessage(){
+            alert("Привет, " + this.name + "!");
+        }
+    }
+    let andrey = new People("Андрей");
+    andrey.showMessage()
+
+    // Задание №6
+
+    class Reverse{
+        constructor(name){
+            this.name = name.split('').reverse().join('');
+        }
+        getName(){
+            return this.name;
+        }
+    }
+    let Iam = new Reverse("Артемий");
+    alert(Iam.getName())
+
+    // Дополнительное задание
+    const Colors = { RED: 'красный', BLACK: 'черный', WHITE: 'белый' };
+    class Simulator{
+        constructor(){
+            this.colors = new Array(0, 1, 2);
+        }
+        randomColor(){
+            return this.colors[Math.floor(Math.random()*this.colors.length)];
+        }
+        colorToText(colorNum){
+            switch(colorNum){
+                case 0:
+                    return Colors.RED;
+                    break;
+                case 1:
+                    return Colors.BLACK;
+                    break;
+                case 2:
+                    return Colors.WHITE;
+                    break;
+                default:
+                    return 'Цвет не был определен';
+            }
+        }        
+        runSimulation(n){            
+            let prev_color = 3;
+            let max_con = 0;
+            let curr_con = 0;
+            let max_color = 3;
+            for(let i = 0; i < n; i++){
+                let color = this.randomColor();       
+                if(color == prev_color){
+                    curr_con++;
+                    if(curr_con > max_con){
+                        max_con = curr_con;
+                        max_color = color;
+                    }
+                }
+                else{
+                    curr_con = 0;
+                }
+                prev_color = color;
+            }
+            alert('Самая длинная последовательность: ' + max_con.toString() + ', цвета: ' + this.colorToText(max_color));
+        }
+    }
+    sim = new Simulator();
+    sim.runSimulation(100000);    
+</script>
+<!--
+    Контрольные вопросы
+    1. Для чего нужен класс?
+    Ответ: Класс позволяет создавать объекты с определенными свойствами и методами. Они являются основой при разработке больших программ,
+    так как позволяют структурировать код и упростить его повторное использование.
+
+    2. Как доказать, что класс в JS – это функция
+    Ответ: Мы можем назвать класс функцией, так как для его создания нам необходимо обязательно создать контсруктор. По сути в JavaScript,
+    классы отличаются от простых объектов тем, что имеют функцию-конеструктор. 
+-->

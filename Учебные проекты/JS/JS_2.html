@@ -1,0 +1,102 @@
+<meta charset="UTF-8">
+<script>
+    // Задание №1
+
+    let points = 0;
+    alert('Загадка 1');
+    let ans1 = prompt('Введите отгадку для загадки 1');
+    if(ans1 == 'ответ 1'){
+        alert('Верно!');
+        points++;
+    }
+    else{
+        alert('Неверно!');
+    }
+    alert('Загадка 2');
+    let ans2 = prompt('Введите отгадку для загадки 2');
+    if(ans2 == 'ответ 2'){
+        alert('Верно!');
+        points++;
+    }
+    else{
+        alert('Неверно!');
+    }
+    alert('Количество правильных ответов: ' + points.toString());
+
+    // Задание №2
+
+    for(let i = 1; i < 11; i++){
+        alert(i.toString());
+    }
+
+    // Задание №3
+
+    while(true){
+        let ans = prompt('Еще по одной?');
+        if(ans == 1){
+            alert('А я думал ты меня уважаешь...');
+            break;
+        }
+    }
+
+    // Задание №4
+
+    let factorial = 1;
+    for(let i = 1; i <= 9; i++){
+        factorial *= i;
+    }
+    alert('Факториал 9 равен: ' + factorial.toString());
+
+    // Задание №5
+
+    let name = prompt('Введите ваше имя: ');
+    let reverse = Array.from(name).reverse().join('');
+    if(name.toLowerCase() == reverse.toLowerCase()){
+        alert('Ваше имя это палиндром!');
+    }
+    else{
+        alert('Ваше имя это не палиндром!');
+    }
+
+    //  Задание №6
+
+    let N = parseInt(prompt('Введите число'));
+    let primes = new Array();
+    for(let i = 2; i < N; i++){
+        let is_prime = true;
+        primes.forEach(function(item) {
+            if(i % item == 0){
+                is_prime = false;
+            }
+        });
+        if(is_prime){
+            primes.push(i);
+        }
+    }
+    primes.splice(0, 0, 1);
+    alert(primes.toString());
+
+    // Дополнительное задание 
+    function getRandomInt(max){
+        return Math.floor(Math.random() * max) + 1;
+    }
+    let someNumber = getRandomInt(3);
+    while(true){
+        answer = Number(prompt('Число от 1 до 3:'));
+        if(answer == someNumber){
+            alert('Вы угадали!');
+            break;
+        }
+        alert('Вы не угадали! Попробуйте еще:')
+    }
+    
+</script>
+<!--
+    Контрольные вопросы
+
+    1. Какие условия могут проверяться оператором if?
+    Ответ: Данным оператором может проверяться любое условие, которое можно выразить в виде логического выражения с двумя значениеями: Истина или Ложь
+
+    2. В чем отличие циклов while, do, for?
+    Ответ: Для цикла for неоьходимо наперед знать количество итераций, для циклов while и do while достаточно сформировать условие выхода.
+-->
